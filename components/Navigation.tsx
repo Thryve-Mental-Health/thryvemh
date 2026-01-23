@@ -27,9 +27,6 @@ export default function Navigation() {
               <Link href={isHomePage ? "#how-it-works" : "/#how-it-works"} className="text-gray-700 hover:text-gray-900 text-sm font-medium">
                 How it works
               </Link>
-              <Link href={isHomePage ? "#pricing" : "/#pricing"} className="text-gray-700 hover:text-gray-900 text-sm font-medium">
-                Pricing
-              </Link>
             </>
             <Link href="/about" className={`text-sm font-medium ${pathname === '/about' ? 'text-gray-900 font-semibold' : 'text-gray-700 hover:text-gray-900'}`}>
               About
@@ -85,13 +82,6 @@ export default function Navigation() {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   How it works
-                </Link>
-                <Link
-                  href={isHomePage ? "#pricing" : "/#pricing"}
-                  className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Pricing
                 </Link>
               </>
               <Link

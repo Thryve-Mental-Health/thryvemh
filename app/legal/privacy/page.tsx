@@ -124,7 +124,7 @@ export default function PrivacyPolicy() {
               <li><strong>Opt-out:</strong> Opt out of certain communications and data processing</li>
             </ul>
             <p className="text-gray-700">
-              To exercise these rights, please contact us at privacy@thryvemh.com.
+              To exercise these rights, please contact us at support@thryvementalhealth.com.
             </p>
           </section>
 
@@ -156,7 +156,7 @@ export default function PrivacyPolicy() {
             </p>
             <div className="bg-gray-50 p-4 rounded-lg">
               <p className="text-gray-700 mb-2"><strong>Thryve Mental Health, Inc</strong></p>
-              <p className="text-gray-700 mb-2">Email: privacy@thryvemh.com</p>
+              <p className="text-gray-700 mb-2">Email: support@thryvementalhealth.com</p>
               <p className="text-gray-700">2909 Wayzata Blvd STE 92272</p>
               <p className="text-gray-700">Minneapolis, MN 55405</p>
             </div>

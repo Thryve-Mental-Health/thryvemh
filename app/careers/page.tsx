@@ -55,7 +55,7 @@ export default function Careers() {
             We're always interested in hearing from talented people who share our mission. Send us your resume and let us know how you'd like to contribute.
           </p>
           <Link 
-            href="mailto:careers@thryvemh.com"
+            href="mailto:support@thryvementalhealth.com"
             className="inline-flex items-center px-6 py-3 text-white font-medium hover:opacity-90"
             style={{ backgroundColor: 'rgb(11, 102, 61)', borderRadius: '4px' }}
           >
