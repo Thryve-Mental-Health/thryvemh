@@ -1,19 +1,59 @@
+'use client';
+
+import { useState } from 'react';
+
 export default function ContactForm() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    
+    // Submit to Netlify
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData as any).toString(),
+    })
+      .then(() => {
+        setIsSubmitted(true);
+        form.reset();
+      })
+      .catch((error) => {
+        console.error('Form submission error:', error);
+        alert('Something went wrong. Please try again.');
+      });
+  };
+
+  if (isSubmitted) {
+    return (
+      <div className="bg-green-50 border border-green-200 rounded-lg p-8 text-center">
+        <div className="text-green-600 text-lg font-semibold mb-2">
+          Thank you for your interest!
+        </div>
+        <p className="text-green-700">
+          We've received your information and will reach out when Thryve is ready.
+        </p>
+      </div>
+    );
+  }
+
   return (
     <form
       name="thryve-waitlist"
       method="POST"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
+      onSubmit={handleSubmit}
       className="bg-gray-50 rounded-lg p-8 space-y-6"
     >
       <input type="hidden" name="form-name" value="thryve-waitlist" />
-
+      
       {/* Netlify bot field */}
       <p className="hidden">
         <label>
-          Don’t fill this out:{' '}
-          <input name="bot-field" />
+          Don't fill this out: <input name="bot-field" />
         </label>
       </p>
 
